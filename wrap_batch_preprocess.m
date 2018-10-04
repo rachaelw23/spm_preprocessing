@@ -10,7 +10,7 @@ addpath(genpath(scriptdir));
 
 % specify variables
 outLabel = 'distext'; %output label
-subjects = {'sub-01' 'sub-03' 'sub-06' 'sub-13' 'sub-16' 'sub-19' 'sub-26' 'sub-32' 'sub-34' 'sub-37' 'sub-43' 'sub-45' 'sub-48' 'sub-02' 'sub-05' 'sub-10' 'sub-14' 'sub-17' 'sub-20' 'sub-27' 'sub-33' 'sub-36' 'sub-38' 'sub-44' 'sub-46' 'sub-49'}; 
+subjects = {'sub-01'}; 
 batch_functions = {'preprocessing_jobs'}; 
 
 
