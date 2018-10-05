@@ -13,15 +13,17 @@ b.funcDir = strcat(dataDir,b.curSubj,session,'/func','/');  % subject specific f
 b.anatDir = strcat(dataDir,b.curSubj,session,'/anat','/');  % sbuject specific anatomical directory
 b.funcFilename = dir(strcat(b.funcDir,'sub*','rest_run-',funcRun,'_bold.nii'));
 b.anatFilename = dir(strcat(b.anatDir,'*ses-day1_T1w.nii'));
-b.funcFullpath = strcat(b.funcDir, { b.funcFilename.name }); % full filepath of resting state scan
+b.funcFullpath = strcat(b.funcDir, { b.funcFilename.name }); % full filepath of functional scan
 b.anatFullpath = strcat(b.anatDir, { b.anatFilename.name }); % full fielpath of T1 anatomical scan
-b.raFilename = {strcat(b.funcDir,'ra',b.funcFilename.name)}; % realigned/resliced images (for some reason deformations for func does not work with the dependency)
+
 
 % final anat preprocessing outputs
 b.deformationField = {strcat(b.anatDir,'mri/','y_',b.anatFilename.name)};
 b.anatSkullStrippedNative = {strcat(b.anatDir,'anat_skullstripped.img')};
 b.finalAnat = strcat(b.anatDir,'wanat_skullstripped.img');
 
+b.raFilename = {strcat(b.funcDir,'ra', b.funcFilename.name)}; % func slice-timing and motion corrected (for some reason deformations
+% module doesnt work with dependency)
 
 end
  
