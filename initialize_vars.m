@@ -6,7 +6,7 @@ b.spmDir = fileparts(which('spm'));         % filepath to SPM installation
 % directory and raw input info; assumes BIDS directory structure
 dataDir = '/mnt/keoki/experiments2/rachael/data/distext/'; % directory that contains subject directories
 session = '/ses-day1';
-funcRun = '02';
+funcRun = '01';
 b.curSubj = subjects{i};
 b.subjDir = strcat(dataDir,b.curSubj,session);
 b.funcDir = strcat(dataDir,b.curSubj,session,'/func','/');  % subject specific functional directory
