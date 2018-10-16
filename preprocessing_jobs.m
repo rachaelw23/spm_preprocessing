@@ -40,7 +40,7 @@ if exist(b.finalAnat, 'file') == 2
     matlabbatch{4}.spm.spatial.coreg.estimate.eoptions.fwhm = [7 7]; 
     %% normalize functional
     matlabbatch{5}.spm.util.defs.comp{1}.def(1) = b.deformationField;
-    matlabbatch{5}.spm.util.defs.comp{2}.id.space = {'/mnt/keoki/experiments2/Graner/Data/SPM_Preprocessing_Things/SPM_batch_templates/EPI_resamp.nii'};
+    matlabbatch{5}.spm.util.defs.comp{2}.id.space = {'/mnt/keoki/experiments2/Graner/Data/Raj_PTSD/PLS_DA_models/mean_3comp_amused_group_emotion_PLS_beta_BSz_10000it.img'};
     matlabbatch{5}.spm.util.defs.out{1}.pull.fnames(1) = b.raFilename;
     matlabbatch{5}.spm.util.defs.out{1}.pull.savedir.saveusr = {b.funcDir};
     matlabbatch{5}.spm.util.defs.out{1}.pull.interp = 4;
